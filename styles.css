@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    border: 2px solid #e600ff;
+    background: linear-gradient(145deg, #1f1f1f, #282828);
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+.title {
+    font-size: 4em;
+    color: #00fff7;
+    text-shadow: 0 0 20px #00fff7, 0 0 30px #00fff7;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+.version {
+    font-size: 1.5em;
+    color: #ff0044;
+    margin: 10px 0;
+    animation: neon 2s ease-in-out infinite alternate;
+}
+
+.patch-notes {
+    margin: 20px 0;
+}
+
+    .patch-notes h3 {
+        font-size: 1.2em;
+        color: #f3ff00;
+        text-shadow: 0 0 15px #f3ff00;
+    }
+
+    .patch-notes ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .patch-notes ul li {
+            font-size: 1em;
+            margin: 5px 0;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+        }
+
+.download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #00fff7;
+    border: none;
+    font-size: 1.2em;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 255, 247, 0.5);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .download-btn:hover {
+        background: #ff0044;
+        box-shadow: 0 0 20px rgba(255, 0, 68, 0.5);
+        transform: scale(1.1);
+    }
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #ff0044, 0 0 30px #ff0044, 0 0 40px #ff0044;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
